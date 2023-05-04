@@ -17,16 +17,13 @@ data "aws_ami" "ubuntu-linux-2004" {
     name   = "virtualization-type"
     values = ["hvm"]
   }
-  filter {
-    name   = "architecture"
-    values = ["x86_64"]
-  }
+ 
 }
 
 
 resource "aws_instance" "linux-server" {
   ami = data.aws_ami.ubuntu-linux-2004.id
-  instance_type = "t2.medium"
+  instance_type = "t2.micro"
   key_name = ajith-keys
 }
 
