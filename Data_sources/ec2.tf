@@ -24,7 +24,8 @@ data "aws_ami" "ubuntu-linux-2004" {
 resource "aws_instance" "linux-server" {
   ami = data.aws_ami.ubuntu-linux-2004.id
   instance_type = "t2.micro"
-  key_name = ajith-keys
+  key_name = ajith_keys
 }
 
-
+#https://stackoverflow.com/questions/60757334/git-push-from-visual-studio-code-no-anonymous-write-access-authentication-fai
+#git remote set-url origin https://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@github.com/sanjeev0181/Devops-roboshop-project.git
