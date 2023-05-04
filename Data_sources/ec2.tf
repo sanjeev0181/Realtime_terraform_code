@@ -26,7 +26,7 @@ data "aws_ami" "ubuntu-linux-2004" {
 
 resource "aws_instance" "linux-server" {
   ami = data.aws_ami.ubuntu-linux-2004.id
-  instance_type = t2.micro
+  instance_type = "t2.medium"
   key_name = ajith-keys
 }
 
